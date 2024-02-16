@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="simulator"></canvas>
+    <div>
+        <label for="quantityRocks">Quantity of Rocks:</label>
+        <input type="number" id="quantityRocks" value="8">
+        <label for="quantityPapers">Quantity of Papers:</label>
+        <input type="number" id="quantityPapers" value="8">
+        <label for="quantityScissors">Quantity of Scissors:</label>
+        <input type="number" id="quantityScissors" value="8">
+        <br>
+        <label for="speed">Speed: </label>
+        <input type="range" id="speed" min="1" max="10" value="3">
+        <span id="currentSpeed">3</span>
+        <button id="startButton">Start</button>
+        <button id="stopButton" style="display: none;">Stop</button>
+        <button id="pauseButton" style="display: none;">Pause</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
