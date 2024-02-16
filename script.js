@@ -128,12 +128,12 @@ function stopAnimation() {
 
 function pauseAnimation() {
     paused = true;
-    pauseButton.textContent = 'Continue';
+    pauseButton.innerHTML = '<i class="fas fa-play"></i>';
 }
 
 function continueAnimation() {
     paused = false;
-    pauseButton.textContent = 'Pause';
+    pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
     animateEmojis();
 }
 
