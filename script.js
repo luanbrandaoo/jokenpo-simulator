@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 600;
 
-var emojiSize = 30;
+var emojiSize = 40;
 
 var emojis = [];
 var animationId;
@@ -65,7 +65,7 @@ function animateEmojis() {
             if (emoji.x + emojiSize > canvas.width || emoji.x < 0) {
                 emoji.dx = -emoji.dx;
             }
-            if (emoji.y + emojiSize > canvas.height || emoji.y < 0) {
+            if (emoji.y > canvas.height || emoji.y - emojiSize < 0) {
                 emoji.dy = -emoji.dy;
             }
         });
