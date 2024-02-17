@@ -8,23 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <canvas id="simulator"></canvas>
-    <div>
-        <label for="quantityRocks">Quantity of Rocks:</label>
-        <input type="number" id="quantityRocks" value="8">
-        <label for="quantityPapers">Quantity of Papers:</label>
-        <input type="number" id="quantityPapers" value="8">
-        <label for="quantityScissors">Quantity of Scissors:</label>
-        <input type="number" id="quantityScissors" value="8">
-        <br>
-        <label for="speed">Speed: </label>
-        <input type="range" id="speed" min="1" max="10" value="5">
-        <span id="currentSpeed">5</span>
-        <button id="startButton"><i class="fas fa-play"></i></button>
-        <button id="stopButton" style="display: none;"><i class="fas fa-stop"></i></button>
-        <button id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
+    <div class="content">
+        <div class="title">
+            <h1>Jokenpô<br>Simulator</h1>
+        </div>
+        <div class="simulatordiv">
+            <canvas id="simulator"></canvas>
+        </div>
+            <div class="quantity">
+                <div class="elementQuantity">
+                    <span class="emojiQuantity">🪨</span>
+                    <input class="input" type="number" id="quantityRocks" min="0" max="50" value="8">
+                </div>
+                <div class="elementQuantity">
+                    <span class="emojiQuantity">📜</span>
+                    <input class="input" type="number" id="quantityRocks" min="0" max="50" value="8">
+                </div>
+                <div class="elementQuantity">
+                    <span class="emojiQuantity">✂️</span>
+                    <input class="input" type="number" id="quantityRocks" min="0" max="50" value="8">
+                </div>
+            </div>
+            <div class="rangeDiv">
+                <input type="range" class="range" id="speed" min="1" max="1000" value="300">
+            </div>
+            <div class="buttons">
+                <button class="actionButton id="startButton" style="display: none;"><i class="fas fa-play"></i></button>
+                <button class="actionButton id="stopButton" ><i class="fas fa-stop"></i></button>
+                <button class="actionButton id="pauseButton" ><i class="fas fa-pause"></i></button>
+            </div>
     </div>
-
     <script src="script.js"></script>
+    <!-- SIMULATOR IS NOT WORKING <script src="simulator.js"></script>-->
 </body>
 </html>

@@ -1,14 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(#151515, #111111);
+    font-size: 100%;
 }
 
 canvas {
-    border: 1px solid #000;
     display: block;
-    margin: 20px auto;
 }
 
-button {
-    display: block;
-    margin: 10px auto;
+h1 {
+    color: #BB3333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 15vw;
+    line-height: 0.9;
+}
+
+.simulatordiv{
+    background-color: #232323;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.title{
+    /*background-color: red;*/ 
+}
+
+.content{
+    margin: 0 7vw 0 7vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 2vw;
+    align-items: center;
+}
+
+.elementQuantity {
+    background-color: #232323;
+    border: 2px solid #BB3333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 30%;
+}
+
+.emojiQuantity{
+    font-size: 30px;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.rangeDiv{
+    width: 100%;
+}
+
+.range{
+    align-items: center;
+    width: 100%;
+    border-radius: 0px;
+    background: none;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+  
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 12.8px;
+    cursor: pointer;
+    background: #BB3333;
+    border-radius: 25px;
+}
+  
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #8d2424;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.6px;
+}
+  
+.actionButton {
+    background-color: #BB3333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    height: 10vw;
+    width: 10vw;
+}
+
+.actionButton:hover {
+    background-color: #8d2424;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 3vw;
 }
