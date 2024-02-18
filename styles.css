@@ -132,6 +132,7 @@ input[type=range]::-webkit-slider-thumb {
     outline: none;
     height: 10vw;
     width: 10vw;
+    font-size: 4vw;
 }
 
 .actionButton:hover {
@@ -157,17 +158,14 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 10px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #151515;
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #232323;
   }
@@ -181,5 +179,78 @@ input[type="number"] {
 
     .content {
         margin: 5vw 9vw 5vw 9vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "a b"
+          "a c"; 
+      }
+
+    .simulatordiv {
+        justify-self: end; 
+        align-self: center; 
+        grid-area: a; 
+      }
+
+    .title {
+        justify-self: center; 
+        align-self: end; 
+        grid-area: b; 
+      }
+
+    .controls {
+        justify-self: start; 
+        align-self: start; 
+        grid-area: c; 
+        width: 40vw;
+      }
+
+    .actionButton{
+        height: 7vw;
+        width: 7vw;
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 9vw;
+        line-height: 0.9;
+    }
+
+
+    
+
+    .elementQuantity {
+        background-color: #232323;
+        border: 2px solid #BB3333;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 6vw;
+    }
+    
+    .emojiQuantity{
+        margin-top: -5px;
+        font-size: 3vw;
+    }
+    
+    .input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3vw;
+        width: auto;
+        color: white;
     }
 }

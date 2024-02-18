@@ -15,30 +15,31 @@
         <div class="simulatordiv">
             <canvas id="simulator"></canvas>
         </div>
-            <div class="quantity">
-                <div class="elementQuantity">
-                    <span class="emojiQuantity">🪨</span>
-                    <input class="input" type="number" id="quantityRocks" min="00" max="50" value="08">
+            <div class="controls">
+                <div class="quantity">
+                    <div class="elementQuantity">
+                        <span class="emojiQuantity">🪨</span>
+                        <input class="input" type="number" id="quantityRocks" min="00" max="50" value="08">
+                    </div>
+                    <div class="elementQuantity">
+                        <span class="emojiQuantity">📜</span>
+                        <input class="input" type="number" id="quantityPapers" min="00" max="50" value="08">
+                    </div>
+                    <div class="elementQuantity">
+                        <span class="emojiQuantity">✂️</span>
+                        <input class="input" type="number" id="quantityScissors" min="00" max="50" value="08">
+                    </div>
                 </div>
-                <div class="elementQuantity">
-                    <span class="emojiQuantity">📜</span>
-                    <input class="input" type="number" id="quantityPapers" min="00" max="50" value="08">
+                <div class="rangeDiv">
+                    <input type="range" class="range" id="speed" min="1" max="1000" value="300">
                 </div>
-                <div class="elementQuantity">
-                    <span class="emojiQuantity">✂️</span>
-                    <input class="input" type="number" id="quantityScissors" min="00" max="50" value="08">
+                <div class="buttons">
+                    <button class="actionButton" id="startButton"><i class="fas fa-play"></i></button>
+                    <button class="actionButton" id="stopButton" style="display: none;"><i class="fas fa-stop"></i></button>
+                    <button class="actionButton" id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
                 </div>
-            </div>
-            <div class="rangeDiv">
-                <input type="range" class="range" id="speed" min="1" max="1000" value="300">
-            </div>
-            <div class="buttons">
-                <button class="actionButton" id="startButton"><i class="fas fa-play"></i></button>
-                <button class="actionButton" id="stopButton" style="display: none;"><i class="fas fa-stop"></i></button>
-                <button class="actionButton" id="pauseButton" style="display: none;"><i class="fas fa-pause"></i></button>
             </div>
     </div>
     <script src="script.js"></script>
-    <script src="simulator.js"></script>
 </body>
 </html>
