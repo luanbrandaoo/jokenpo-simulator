@@ -1,10 +1,14 @@
+var simulatordiv = document.querySelector('.simulatordiv');
 var canvas = document.getElementById('simulator');
 var ctx = canvas.getContext('2d');
 
-canvas.width = 600;
-canvas.height = 600;
+var divWidth = simulatordiv.clientWidth;
+var divHeight = simulatordiv.clientHeight;
 
-var emojiSize = 40;
+canvas.width = divWidth;
+canvas.height = divHeight;
+
+var emojiSize = divWidth/16;
 
 var emojis = [];
 var animationId;
@@ -13,6 +17,8 @@ var startButton = document.getElementById('startButton');
 var stopButton = document.getElementById('stopButton');
 var pauseButton = document.getElementById('pauseButton');
 var paused = false;
+
+var speed = speedInput.value/100
 
 function createEmojis() {
     emojis = [];
@@ -31,8 +37,8 @@ function createRandomEmojis(num, emoji) {
         var x = Math.random() * (canvas.width - emojiSize);
         var y = Math.random() * (canvas.height - emojiSize);
         var angle = Math.random() * Math.PI * 2;
-        var dx = Math.cos(angle) * speedInput.value;
-        var dy = Math.sin(angle) * speedInput.value;
+        var dx = Math.cos(angle) * speed;
+        var dy = Math.sin(angle) * speed;
 
         emojis.push({ type: emoji, x: x, y: y, dx: dx, dy: dy });
     }
@@ -40,7 +46,7 @@ function createRandomEmojis(num, emoji) {
 
 function drawEmojis() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "40px serif";
+    ctx.font = `${emojiSize}px serif`;
     emojis.forEach(function(emoji) {
         switch (emoji.type) {
             case 'rock':
@@ -148,10 +154,50 @@ document.getElementById('pauseButton').addEventListener('click', function() {
 });
 
 speedInput.addEventListener('input', function() {
-    document.getElementById('currentSpeed').textContent = this.value;
+    speed = speedInput.value/100
     emojis.forEach(function(emoji) {
         var angle = Math.atan2(emoji.dy, emoji.dx);
-        emoji.dx = Math.cos(angle) * speedInput.value;
-        emoji.dy = Math.sin(angle) * speedInput.value;
+        emoji.dx = Math.cos(angle) * speed;
+        emoji.dy = Math.sin(angle) * speed;
     });
+});
+
+function disableResponsiveness() {
+    var elements = document.querySelectorAll('*');
+    
+    elements.forEach(function(element) {
+        var style = getComputedStyle(element);
+        
+        if (style.width !== 'auto') {
+            element.style.width = style.width;
+        }
+        if (style.height !== 'auto') {
+            element.style.height = style.height;
+        }
+        
+        if (style.position !== 'static') {
+            element.style.position = 'absolute';
+            
+            if (style.top !== 'auto') {
+                element.style.top = style.top;
+            }
+            if (style.left !== 'auto') {
+                element.style.left = style.left;
+            }
+            if (style.bottom !== 'auto') {
+                element.style.bottom = style.bottom;
+            }
+            if (style.right !== 'auto') {
+                element.style.right = style.right;
+            }
+        }
+        
+        if (style.fontSize !== 'medium') {
+            element.style.fontSize = style.fontSize;
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    disableResponsiveness();
 });

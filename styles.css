@@ -68,10 +68,11 @@ h1 {
     flex-wrap: nowrap;
     justify-content: center;
     width: 30%;
+    height: 11vw;
 }
 
 .emojiQuantity{
-    font-size: 30px;
+    font-size: 7vw;
 }
 
 .input{
@@ -79,7 +80,8 @@ h1 {
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 7vw;
+    width: auto;
     color: white;
 }
 
@@ -141,4 +143,15 @@ input[type=range]::-webkit-slider-thumb {
     flex-wrap: nowrap;
     justify-content: center;
     gap: 3vw;
+    margin-top: -10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
