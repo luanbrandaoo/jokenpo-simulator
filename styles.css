@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     background-image: linear-gradient(#151515, #111111);
     font-size: 100%;
+    overflow-x: hidden;
 }
 
 canvas {
@@ -154,4 +155,31 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #151515;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #232323;
+  }
+
+
+
+@media (min-width: 720px) {
+    h1{
+        font-size: 13vw;
+    }
+
+    .content {
+        margin: 5vw 9vw 5vw 9vw;
+    }
 }
