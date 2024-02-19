@@ -88,6 +88,7 @@ h1 {
 
 .rangeDiv{
     width: 100%;
+    margin: 2vh 0 2vh 0;
 }
 
 .range{
@@ -184,10 +185,11 @@ input[type="number"] {
 
 @media (min-width: 1024px) {
     .content {
+        margin: 0 9vw 0 9vw;
         display: grid; 
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
-        gap: 0px 0px; 
+        gap: 2vw 3vw; 
         grid-template-areas: 
           "a b"
           "a c"; 
@@ -203,39 +205,31 @@ input[type="number"] {
         justify-self: center; 
         align-self: end; 
         grid-area: b; 
+        padding-bottom: 2.5vw;
       }
 
     .controls {
-        justify-self: start; 
+        justify-self: center; 
         align-self: start; 
         grid-area: c; 
         width: 40vw;
+        margin-top: -2.5vw;
       }
 
     .actionButton{
-        height: 7vw;
-        width: 7vw;
-        font-size: 3vw;
+        height: 5vw;
+        width: 5vw;
+        font-size: 2vw;
     }
 
     h1 {
-        font-size: 9vw;
+        font-size: 8vw;
         line-height: 0.9;
     }
 
-
-    
-
     .elementQuantity {
-        background-color: #232323;
-        border: 2px solid #BB3333;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        border: 3px solid #BB3333;
         align-items: center;
-        width: 30%;
         height: 6vw;
     }
     
@@ -245,12 +239,14 @@ input[type="number"] {
     }
     
     .input{
-        background-color: transparent;
-        border: none;
-        outline: none;
-        font-family: 'Montserrat', sans-serif;
         font-size: 3vw;
-        width: auto;
-        color: white;
+    }
+
+    .rangeDiv{
+        margin: 2vw 0 2vw 0;
+    }
+
+    .buttons{
+        gap: 1vw;
     }
 }

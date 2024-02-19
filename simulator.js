@@ -56,7 +56,7 @@ function drawEmojis() {
                 ctx.fillText("📜", emoji.x, emoji.y);
                 break;
             case 'scissors':
-                ctx.fillText("✂️", emoji.x, emoji.y);
+                ctx.fillText("✌️", emoji.x, emoji.y);
                 break;
         }
     });
